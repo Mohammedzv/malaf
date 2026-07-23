@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#06142e,#0d1b42,#123b78);
+    overflow:hidden;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+}
+
+/* «·‰ÃÊ„ */
+
+#stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:0;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle linear infinite;
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.2;
+transform:scale(.5);
+}
+
+50%{
+opacity:1;
+transform:scale(1.4);
+}
+
+100%{
+opacity:.2;
+transform:scale(.5);
+}
+
+}
+
+/* «·›—‘«  */
+
+.brush{
+    position:absolute;
+    filter:blur(70px);
+    opacity:.28;
+    border-radius:50%;
+}
+
+.one{
+    width:350px;
+    height:350px;
+    background:#58d3ff;
+    top:-120px;
+    left:-120px;
+}
+
+.two{
+    width:300px;
+    height:300px;
+    background:#ffffff33;
+    bottom:-120px;
+    right:-120px;
+}
+
+.three{
+    width:260px;
+    height:260px;
+    background:#4b7fff;
+    top:45%;
+    left:70%;
+}
+
+/* «·ﬂ«—  */
+
+.card{
+
+position:relative;
+z-index:2;
+
+width:90%;
+max-width:700px;
+
+padding:45px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(25px);
+
+border:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+box-shadow:0 25px 60px rgba(0,0,0,.4);
+
+}
+
+.title{
+
+font-size:40px;
+
+margin-bottom:30px;
+
+font-weight:800;
+
+}
+
+#message{
+
+font-size:24px;
+
+line-height:2;
+
+min-height:180px;
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:16px 50px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:22px;
+
+font-weight:bold;
+
+background:white;
+
+color:#0c4cff;
+
+transition:.4s;
+
+box-shadow:0 0 25px rgba(255,255,255,.4);
+
+animation:pulse 2s infinite;
+
+}
+
+button:hover{
+
+transform:scale(1.07);
+
+}
+
+@keyframes pulse{
+
+50%{
+transform:scale(1.05);
+}
+
+}
+
+#ending{
+
+display:none;
+
+position:absolute;
+
+inset:0;
+
+background:#06142e;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+animation:fade 2s;
+
+z-index:10;
+
+}
+
+#ending h2{
+
+font-size:52px;
+
+margin-bottom:20px;
+
+color:#8fd3ff;
+
+text-shadow:0 0 25px #7ecfff;
+
+}
+
+#ending p{
+
+font-size:30px;
+
+color:white;
+
+letter-spacing:2px;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
